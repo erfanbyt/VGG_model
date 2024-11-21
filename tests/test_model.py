@@ -1,13 +1,13 @@
 import unittest
 import torch
 import torch.nn as nn
-import torchsummary as summary
+# import torchsummary as summary
 
 from vgg_model.model import Block, VGG
 
 class TestVGG(unittest.TestCase):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, *args):
+        super().__init__(*args)
 
     def test_CNN_block_output(self):
         block = Block(in_channels=3, out_channels=64, no_layers=2)
